@@ -19,7 +19,7 @@
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" href="#!">{{__('content.choose')}}</a>
                         @foreach(\App\Models\Journals::all() -> unique('year') -> sortBy('year') as $journal)
-                            <a  class="dropdown-item {{Request::segment(3) == $journal -> year ? 'active' : !Request::segment(3) && $journal -> year == date('Y') ? 'active' : '' }}" href="{{route('journal.archive',$journal -> year)}}">{{$journal -> year}}</a>
+                            <a  class="dropdown-item {{Request::segment(3) == $journal -> year ? 'active' : (!Request::segment(3) && $journal -> year == date('Y') ? 'active' : '') }}" href="{{route('journal.archive',$journal -> year)}}">{{$journal -> year}}</a>
                         @endforeach
                     </div>
                 </div>
