@@ -14,7 +14,7 @@
                 @foreach($editors as $editor)
                     <div class="col-lg-2 col-md-4 col-6">
                         <div class="card">
-                            <img class="card-img-top" src="{{$editor -> image_url ? $editor -> image_url : asset('/img/unnamed.png')}}" alt="Card image cap" style="height: 121px">
+                            <img class="card-img-top" src="{{$editor -> editor_photo ? $editor -> editor_photo : asset('/img/unnamed.png')}}" alt="Card image cap" style="height: 121px">
                             <div class="card-body">
                                 <h5 class="card-title">{!! $editor -> name !!}</h5>
                                 <p class="card-text text-muted" style="font-size: 14px;">{!! $editor -> title !!}</p>
