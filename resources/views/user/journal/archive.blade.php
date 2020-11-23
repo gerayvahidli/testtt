@@ -14,12 +14,12 @@
                     <label for="dropdownMenuButton"><b>{!! __('content.date') !!}</b></label>
                     <br>
                     <button class="btn btn-secondary dropdown-toggle dropdown-toggle-journals" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: white;width: 11em;text-align: left;color: black;">
-                        {!! Request::segment(3) ? : __('content.choose') !!}
+                        {!! Request::segment(3) ? : date('Y') !!}
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="{{route('journal.archive')}}">Seçin</a>
+                        <a class="dropdown-item" href="#!">{{__('content.choose')}}</a>
                         @foreach(\App\Models\Journals::all() -> unique('year') -> sortBy('year') as $journal)
-                            <a  class="dropdown-item {{Request::segment(3) == $journal -> year ? 'active' : '' }}" href="{{route('journal.archive',$journal -> year)}}">{{$journal -> year}}</a>
+                            <a  class="dropdown-item {{Request::segment(3) == $journal -> year ? 'active' : !Request::segment(3) && $journal -> year == date('Y') ? 'active' : '' }}" href="{{route('journal.archive',$journal -> year)}}">{{$journal -> year}}</a>
                         @endforeach
                     </div>
                 </div>
@@ -38,9 +38,7 @@
                                     <h4 class="card-title" style="font-size:14px">{!! \App\Helpers\Helper::getMonths($journal -> month)." ".$journal -> year!!}</h4>
                                 </h4>
 
-                                @if(!empty($journal -> pdf_file))
-                                    <a target="_blank" href="{!! asset($journal -> pdf_file) !!}" style="color: #E4002B;"><i class="fa fa-file-pdf-o"></i> PDF</a>
-                                @endif
+                                <a target="_blank" href="{!! asset($journal -> pdf_file) !!}" style="color: #E4002B;"><i class="fa fa-file-pdf-o" {{empty($journal -> pdf_file) ? 'style=color:transparent;': ''}}></i> {{empty($journal -> pdf_file) ? '' : 'PDF'}}</a>
                                 <a href="{!! route('journal.number',$journal -> id)!!}" class="button-journal"><i class="fa fa-angle-right" style=""></i>
                                 </a>
                             </div>

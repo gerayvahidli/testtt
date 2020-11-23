@@ -11,17 +11,17 @@
             <div class="row">
                 <div class="col-md-12">
                     <img class="leftimg img-fluid" src="img/journal.jpg" style="max-width: 13em;">
-                    <p style="color: #555555;"><b>İSSN: </b>{!! $about_journal -> ISSN !!}</p>
-                    <p style="color: #555555;"><b>Təsis edilmə tarixi: </b>{!! $about_journal -> founding_date !!}</p>
-                    <p style="color: #555555;"><b>Təsisçi: </b> {!! $about_journal -> founder !!}</p>
-                    <p style="color: #555555;"><b>Profil: </b> {!! $about_journal -> profile !!}</p>
-                    <p style="color: #555555;"><b>Nəşrin dili: </b> {!! $about_journal -> languages !!}</p>
-                    <p style="color: #555555;"><b>Dövriliyi: </b> {!! $about_journal -> periodicity !!}</p>
-                    <p style="color: #555555;"><b>Formatı: </b> {!! $about_journal -> format !!}</p>
-                    <p style="color: #555555;"><b>Həcmi: </b> {!! $about_journal -> volume !!}</p>
-                    <p style="color: #555555;"><b>Tirajı: </b>{!! $about_journal -> quantity !!}</p>
-                    <p style="color: #555555;"><b>Çap olunur: </b> {!! $about_journal -> typography !!}</p>
-                    <p style="color: #555555;"><b>Qeydiyyat №si: </b>{!! $about_journal -> registration_num !!}</p>
+                    <p style="color: #555555;"><b>ISSN: </b>{!! $about_journal -> ISSN !!}</p>
+                    <p style="color: #555555;"><b>{!! __('content.foundation_date')!!}: </b>{!! $about_journal -> founding_date !!}</p>
+                    <p style="color: #555555;"><b>{!! __('content.founder')!!}: </b> {!! $about_journal -> founder !!}</p>
+                    <p style="color: #555555;"><b>{!! __('content.profile')!!}: </b> {!! $about_journal -> profile !!}</p>
+                    <p style="color: #555555;"><b>{!! __('content.publication_lang')!!}: </b> {!! $about_journal -> languages !!}</p>
+                    <p style="color: #555555;"><b>{!! __('content.frequency')!!}: </b> {!! $about_journal -> periodicity !!}</p>
+                    <p style="color: #555555;"><b>{!! __('content.format')!!}: </b> {!! $about_journal -> format !!}</p>
+                    <p style="color: #555555;"><b>{!! __('content.volume')!!}: </b> {!! $about_journal -> volume !!}</p>
+                    <p style="color: #555555;"><b>{!! __('content.circulation')!!}: </b>{!! $about_journal -> quantity !!}</p>
+                    <p style="color: #555555;"><b>{!! __('content.printing_at')!!}: </b> {!! $about_journal -> typography !!}</p>
+                    <p style="color: #555555;"><b>{!! __('content.reg_no')!!}: </b>{!! $about_journal -> registration_num !!}</p>
                    {!! $about_journal -> text_area !!}
                 </div>
             </div>

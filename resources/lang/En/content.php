@@ -57,6 +57,17 @@ return [
     'send' => 'Send',
 
 
+    'foundation_date' => 'Foundation date',
+    'Founder' => 'Founder',
+    'profile' => 'Profile',
+    'publication_lang' => 'Publication languages',
+    'frequency' => 'Frequency',
+    'format' => 'Format',
+    'volume' => 'Volume',
+    'circulation' => 'Circulation',
+    'printing_at' => 'Printing at',
+    'reg_no' => 'Registration №',
+
 
 
 

@@ -56,4 +56,18 @@ return [
     'message' => 'Mesajınız',
     'send' => 'Göndər',
 
+
+
+    'foundation_date' => 'Təsis edilmə tarixi',
+    'Founder' => 'Təsisçi',
+    'profile' => 'Profil',
+    'publication_lang' => 'Nəşrin dili',
+    'frequency' => 'Dövriliyi',
+    'format' => 'Formatı',
+    'volume' => 'Həcmi',
+    'circulation' => 'Tirajı',
+    'printing_at' => 'Çap olunur',
+    'reg_no' => 'Qeydiyyat №si',
+
+
 ];

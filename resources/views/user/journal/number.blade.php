@@ -17,7 +17,7 @@
                         {!! \App\Helpers\Helper::getMonths($journal -> month)." ".$journal -> year!!}
                     </h4>
 {{--                    <p style="color: #555555;"><strong>Son nömrə</strong></p>--}}
-                    <a target="_blank" href="{{asset($journal -> pdf_file)}}" style="color: #E4002B;"><i class="fa fa-file-pdf-o"></i> PDF</a>
+                   @if(!empty($journal -> pdf_file)) <a target="_blank" href="{{asset($journal -> pdf_file)}}" style="color: #E4002B;"><i class="fa fa-file-pdf-o"></i> PDF</a>@endif
                 </div>
             </div>
             <h4 class="font-weight-medium mt-4" style="letter-spacing: 1.2px; font: normal normal bold 18px/28px Arial;">{!! __('content.this_number') !!}: </h4>

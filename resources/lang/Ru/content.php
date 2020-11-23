@@ -55,4 +55,17 @@ return [
     'message' => 'Твое сообщение',
     'send' => 'Послать',
 
+
+
+    'foundation_date' => 'Дата учреждения',
+    'Founder' => 'Учредитель',
+    'profile' => 'Профиль',
+    'publication_lang' => 'Язык издания',
+    'frequency' => 'Периодичность',
+    'format' => 'Формат',
+    'volume' => 'Объём',
+    'circulation' => 'Тираж',
+    'printing_at' => 'Печатается',
+    'reg_no' => 'Pегистрации №',
+
 ];
