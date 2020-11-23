@@ -545,22 +545,22 @@
                                                             filebrowserUploadMethod: 'form'
                                                         });
 
-                                                    var abstractRu = CKEDITOR.replace('editor2', {
+                                                    var referencesAz = CKEDITOR.replace('editor2', {
                                                             filebrowserUploadUrl: "{{route('ckeditor.upload', ['_token' => csrf_token() ])}}",
                                                             filebrowserUploadMethod: 'form'
                                                         });
 
-                                                    var abstractEn = CKEDITOR.replace('editor3', {
+                                                    var abstractRu = CKEDITOR.replace('editor3', {
                                                             filebrowserUploadUrl: "{{route('ckeditor.upload', ['_token' => csrf_token() ])}}",
                                                             filebrowserUploadMethod: 'form'
                                                         });
 
-                                                    var referencesAz = CKEDITOR.replace('editor4', {
+                                                    var referencesRu = CKEDITOR.replace('editor4', {
                                                             filebrowserUploadUrl: "{{route('ckeditor.upload', ['_token' => csrf_token() ])}}",
                                                             filebrowserUploadMethod: 'form'
                                                         });
 
-                                                    var referencesRu = CKEDITOR.replace('editor5', {
+                                                    var abstractEn = CKEDITOR.replace('editor5', {
                                                             filebrowserUploadUrl: "{{route('ckeditor.upload', ['_token' => csrf_token() ])}}",
                                                             filebrowserUploadMethod: 'form'
                                                         });
@@ -574,10 +574,10 @@
 
                                                     $( document ).ready(function() {
                                                         CKEDITOR.instances.editor1.setData(htmlDecode(`{{ $article->abstractAz }}`));
-                                                        CKEDITOR.instances.editor2.setData(htmlDecode(`{{ $article->abstractRu }}`));
-                                                        CKEDITOR.instances.editor3.setData(htmlDecode(`{{ $article->abstractEn }}`));
-                                                        CKEDITOR.instances.editor4.setData(htmlDecode(`{{ $article->referencesAz }}`));
-                                                        CKEDITOR.instances.editor5.setData(htmlDecode(`{{ $article->referencesRu }}`));
+                                                        CKEDITOR.instances.editor2.setData(htmlDecode(`{{ $article->referencesAz }}`));
+                                                        CKEDITOR.instances.editor3.setData(htmlDecode(`{{ $article->abstractRu }}`));
+                                                        CKEDITOR.instances.editor4.setData(htmlDecode(`{{ $article->referencesRu }}`));
+                                                        CKEDITOR.instances.editor5.setData(htmlDecode(`{{ $article->abstractEn }}`));
                                                         CKEDITOR.instances.editor6.setData(htmlDecode(`{{ $article->referencesEn }}`));
  
                                                     });
